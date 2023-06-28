@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "seed": "psql -U postgres < seed.sql",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +15,7 @@
     "pg": "^8.11.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "psql": "^0.0.1"
   }
 }
