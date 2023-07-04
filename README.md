@@ -8,6 +8,7 @@
 > **Summary**: PERN Stack without requiring Postgres installed locally  
 > **Includes**:
 > • Javascript -> Typescript
+> • Prisma (ORM)
 > **Requires**:
 > • Windows w/ WSL
 > • Docker 
