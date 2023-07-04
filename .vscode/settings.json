@@ -1,0 +1,129 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.maxTokenizationLineLength": 5000,
+  // "liveSassCompile.settings.excludeList": [
+  //   "**/node_modules/**",
+  //   //".vscode/**",
+  // ],
+  // "liveSassCompile.settings.autoprefix": [
+  //   "> 1%",
+  //   "last 2 versions"
+  // ],
+  // "liveSassCompile.settings.formats": [
+  //   {
+  //     "format": "expanded",
+  //     "extensionName": ".css",
+  //     "savePath": "/dist/styles"
+  //   }
+  // ],
+  "bladeFormatter.format.indentSize": 2,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.preview": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.snippetSuggestions": "top",
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+  "emmet.excludeLanguages": [
+    "markdown",
+  ],
+  "intelephense.rename.exclude": [],
+  "asciidecorator.defaultFont": "ANSI Regular",
+  "asciidecorator.enable": true,
+  "intelephense.compatibility.correctForArrayAccessArrayAndTraversableArrayUnionTypes": false,
+  "[php]": {},
+  "editor.fontSize": 15,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "bladeFormatter.format.enabled": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "window.zoomLevel": -1,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntuv1 (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntuv1"
+      ]
+    }
+  },
+  "typescript.tsdk": "./server/node_modules/typescript/lib",
+  // █████ Added from Reccomendations
+  
+  /**
+    * JavaScript Essentials Config
+    */
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "vscode.typescript-language-features"
+  // },
+  "javascript.format.enable": true,
+  "javascript.format.semicolons": "insert",
+  "javascript.preferences.quoteStyle": "single",
+  "eslint.enable": true,
+  "eslint.codeAction.showDocumentation": {
+      "enable": true
+  },
+  "eslint.codeAction.disableRuleComment": {
+      "enable": true,
+      "location": "sameLine"
+  },
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "'",
+  "npm-intellisense.importLinebreak": ";\r\n",
+  "npm-intellisense.importDeclarationType": "const",
+  /**
+   * The following line is for the specific configuration of the 
+   * Path-Intellisense extension over Javascript
+   */
+  "javascript.suggest.paths": false,
+  "path-intellisense.showHiddenFiles": true,
+  "formattingToggle.affects": [
+      "editor.formatOnPaste",
+      "editor.formatOnType"
+  ],
+  /**
+   * TypeScript Essentials Config
+   */
+  // "[typescript]": {
+  //     "editor.defaultFormatter": "vscode.typescript-language-features"
+  // },
+  "typescript.format.enable": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.preferences.quoteStyle": "single",
+  /**
+   * The following line is for the specific configuration of the 
+   * Path-Intellisense extension over Typescript
+   */
+  // "typescript.suggest.paths": false,
+}

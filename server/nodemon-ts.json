@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "watch": ["src/**/*.ts"],
+  "ignore": ["src/**/*.spec.ts"],
+  "ext": "ts,json",
+  "exec": "tsc -b -v",
+  "legacyWatch": true
+ }
