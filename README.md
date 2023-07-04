@@ -1,4 +1,4 @@
-# **PERN Blueprint - JS**
+# **PERN Blueprint - w/ TS**
 **Contents**
 >**[1. Overview](#overview)**  
 **[2. Getting Started](#getting-started)**  
@@ -7,7 +7,7 @@
 ### 1. Overview  
 > **Summary**: PERN Stack without requiring Postgres installed locally  
 > **Includes**:
-> • Typescript
+> • Javascript -> Typescript
 > **Requires**:
 > • Windows w/ WSL
 > • Docker 
