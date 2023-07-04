@@ -1,4 +1,4 @@
-# **PERN Blueprint**
+# **PERN Blueprint - JS**
 **Contents**
 >**[1. Overview](#overview)**  
 **[2. Getting Started](#getting-started)**  
