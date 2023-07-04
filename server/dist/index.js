@@ -14,61 +14,113 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const _db_1 = require("./_db");
+const client_1 = require("@prisma/client");
 //  Vars
 const port = 5000;
-//  Init express
+//  Inst
+const prisma = new client_1.PrismaClient();
 const app = (0, express_1.default)();
-//  Test Db Connection/Config
-(0, _db_1.testDb)();
-//  Middleware
-app.use((0, cors_1.default)());
-app.use(express_1.default.json());
-//  Routes
-app.listen(port, () => {
-    console.log(`server has started on port ${port}`);
-});
-// Seed Database via file
-app.post("/seed", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        console.log('seed: seed via file');
-        console.log(req.body);
-        if (req.body.action == "init") {
-            let result = (0, _db_1.seedDb)(_db_1.pool);
-            res.json(result);
-        }
+if (false) { //  From before Prisma
+    //  Middleware
+}
+//  Set Run Mode
+var runModes;
+(function (runModes) {
+    runModes["expressPrisma"] = "expressPrisma";
+    runModes["util"] = "util";
+})(runModes || (runModes = {}));
+;
+const runMode = runModes.expressPrisma;
+//  Announce
+console.log(`Running in ${runMode}`);
+if (runMode == runModes.expressPrisma) { // Express & Prisma
+    //  Middleware
+    app.use((0, cors_1.default)()); //  enable CORS w/ various options
+    //  https://github.com/expressjs/cors/
+    app.use(express_1.default.json()); //  Allows parsing incoming body as JSON
+    function main() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const allUsers = yield prisma.user.findMany({
+                include: {
+                    posts: true,
+                    profile: true,
+                },
+            });
+            console.log("all users");
+            console.dir(allUsers, { depth: null });
+        });
     }
-    catch (err) {
-        if (err instanceof Error) {
-            console.log('error');
-            console.error(err.message);
-        }
-        else {
-            console.error("Try/Catch produced error not of type Error");
-        }
-    }
-}));
-// Seed Database via commands in request JSON
-app.post("/seedManual", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        console.log('seedManual: seed manually through queries in JSON');
+    main()
+        .then(() => __awaiter(void 0, void 0, void 0, function* () {
+        yield prisma.$disconnect();
+    }))
+        .catch((e) => __awaiter(void 0, void 0, void 0, function* () {
+        console.error(e);
+        yield prisma.$disconnect();
+        process.exit(1);
+    }));
+    //  Routes
+    //    Example with base setup
+    app.post('/user/:id/profile', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+        console.log("inside of app post /user/:id/profile");
+        console.log(req);
+        const { id } = req.params;
+        console.log("id");
+        console.log(id);
+        console.log("req.params");
+        console.log(req.params);
+        console.log("req.body");
         console.log(req.body);
-        if (req.body.action === "init") {
-            for (let i = 0; i < req.body.sql.length; i++) {
-                let query = req.body.sql[i];
-                let result = yield _db_1.pool.query(query);
-                res.json(result);
+        console.log("atttempting to inst bio");
+        const { bio } = req.body;
+        const profile = yield prisma.profile.create({
+            data: {
+                bio,
+                user: {
+                    connect: {
+                        id: Number(id)
+                    }
+                }
             }
-        }
+        });
+        res.json(profile);
+    }));
+    // //    Example of Structuring
+    // app.get('/feed', async (req: express.Request, res: express.Response) => {
+    //   try {
+    //     console.log(req);
+    //     if (req.body.action == "init") {
+    //       //  do here
+    //     }
+    //   } catch (error: unknown) {
+    //     if (error instanceof Error) {
+    //       console.error(error);
+    //     }
+    //     else {
+    //       console.log('error, was not instance of Error');
+    //     }
+    //   }
+    // });
+    // Listen
+    app.listen(port, () => {
+        console.log(`server has started on port ${port}`);
+    });
+}
+if (runMode == runModes.util) { //  Util - Run commands w/ Prisma without activating API
+    //  Prisma alone
+    function main() {
+        return __awaiter(this, void 0, void 0, function* () {
+            //  ... Prisma Client queries here
+            // const allUsers = await prisma.user.findMany();
+        });
     }
-    catch (err) {
-        if (err instanceof Error) {
-            console.error(err.message);
-            console.error("Try/Catch produced error not of type Error");
-        }
-        else {
-            console.error("Try/Catch produced error not of type Error");
-        }
-    }
-}));
-console.error("Try/Catch produced error not of type Error");
+    main()
+        .then(() => __awaiter(void 0, void 0, void 0, function* () {
+        yield prisma.$disconnect();
+    }))
+        .catch((e) => __awaiter(void 0, void 0, void 0, function* () {
+        console.error(e);
+        yield prisma.$disconnect();
+        process.exit(1);
+    }));
+}

@@ -1,4 +1,4 @@
-# **PERN Blueprint - w/ TS**
+# **PERN Blueprint - w/ TS & Prisma**
 **Contents**
 >**[1. Overview](#overview)**  
 **[2. Getting Started](#getting-started)**  
@@ -22,7 +22,7 @@
 	>   * `cd database` 
 	>   * `./run-postgres.sh`  
 	>
-> 2. open new terminal, 
+  > 2. open new terminal, 
 	>   * `docker exec -it postgres-dev bash` 
 	>   * `psql -h localhost -p 5432 -U postgres`  
 	>   * Enter password for user postgres, default: **`password`**
@@ -33,10 +33,18 @@
 	> 
 	>
 >  #### Step 2 - Start App
-	>  1. open terminal:
-	> <sup>Note: Windows Users must be using WSL </sup>
+	>  1. open terminal:  
+	> <sup>Note: Windows Users must be using WSL </sup>  
 	>   * `cd server` 
-	>   * `npx nodemon index`  
+	>   * `npx prisma migrate dev --name init`  
+  >  
+  > 2. open new terminal, 
+	>   * `cd server` 
+	>   * `npm run dev:tsc`  
+  >  
+  > 2. open new terminal, 
+	>   * `cd server` 
+	>   * `npm run dev:app`  
 	>
 ---
 <sup>Used https://stackedit.io/app# to format this README

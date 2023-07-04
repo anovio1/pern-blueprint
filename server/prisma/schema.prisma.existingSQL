@@ -1,0 +1,15 @@
+//  pulling data from DB to generate model
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//  Created from `npx prisma db pull`
+model entries {
+  entries_id  Int     @id @default(autoincrement())
+  description String? @db.VarChar(255)
+}
