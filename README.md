@@ -6,6 +6,8 @@
 
 ### 1. Overview  
 > **Summary**: PERN Stack without requiring Postgres installed locally  
+> **Includes**:
+> • Javascript
 > **Requires**:
 > • Windows w/ WSL
 > • Docker 
