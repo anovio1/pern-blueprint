@@ -24,6 +24,7 @@
     "@types/pg": "^8.10.2",
     "concurrently": "^8.2.0",
     "nodemon": "^2.0.22",
+    "prisma": "^4.16.2",
     "typescript": "^5.1.6"
   }
 }
