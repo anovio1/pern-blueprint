@@ -17,34 +17,34 @@
 
 ### 2. Getting Started
 >  #### Step 1 - Start Docker Container w/ Postgres
-	>  1. open terminal:
-	> <sup>Note: Windows Users must be using WSL </sup>
-	>   * `cd database` 
-	>   * `./run-postgres.sh`  
-	>
+  >  1. open terminal:
+  > <sup>Note: Windows Users must be using WSL </sup>
+  >   * `cd database` 
+  >   * `./run-postgres.sh`  
+  >
   > 2. open new terminal, 
-	>   * `docker exec -it postgres-dev bash` 
-	>   * `psql -h localhost -p 5432 -U postgres`  
-	>   * Enter password for user postgres, default: **`password`**
-	> 		* <sup> `\l` for list of databases  
-	>                   `\c devdb` to connect to a database  
-	>                   `\dt` to show tables  
-	>                   `\d` to show tables, views, and sequences 
-	> 
-	>
+  >   * `docker exec -it postgres-dev bash` 
+  >   * `psql -h localhost -p 5432 -U postgres`  
+  >   * Enter password for user postgres, default: **`password`**
+  >     * <sup> `\l` for list of databases  
+  >                   `\c devdb` to connect to a database  
+  >                   `\dt` to show tables  
+  >                   `\d` to show tables, views, and sequences 
+  > 
+  >
 >  #### Step 2 - Start App
-	>  1. open terminal:  
-	> <sup>Note: Windows Users must be using WSL </sup>  
-	>   * `cd server` 
-	>   * `npx prisma migrate dev --name init`  
+  >  1. open terminal:  
+  > <sup>Note: Windows Users must be using WSL </sup>  
+  >   * `cd server` 
+  >   * `npx prisma migrate dev --name init`  
   >  
   > 2. open new terminal, 
-	>   * `cd server` 
-	>   * `npm run dev:tsc`  
+  >   * `cd server` 
+  >   * `npm run dev:tsc`  
   >  
   > 2. open new terminal, 
-	>   * `cd server` 
-	>   * `npm run dev:app`  
-	>
+  >   * `cd server` 
+  >   * `npm run dev:app`  
+  >
 ---
 <sup>Used https://stackedit.io/app# to format this README
