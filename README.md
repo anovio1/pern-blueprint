@@ -1,16 +1,15 @@
 # **PERN Template (*ts_prisma_vite*)**
+
 <pre>
   <strong>Updated</strong>
      Code:   7/9/2023
 
-  <strong>ts_prisma_vite</strong>
-     Typescript, Prisma (ORM), and VITE (Front-end Tooling)
-
-  <strong>branches</strong>
-     js               - Javascript
-     ts               - Typescript
-     ts_prisma        - Typescript + Prisma
-     ts_prisma_vite   - Typescript + Prisma + Vite
+  <strong>Branches in Repo</strong>
+<strong>     Viewing   Name                   Description</strong>
+     ⬛        js                     Javascript
+     ⬛        ts                     Typescript
+     ⬛        ts_prisma              Typescript + Prisma
+     ✅        ts_prisma_vite         Typescript + Prisma + Vite
 </pre>
 
 **Contents**  
