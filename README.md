@@ -1,10 +1,17 @@
-# **PERN Template - ts_prisma_vite**
+# **PERN Template (*ts_prisma_vite*)**
 <pre>
-  Updated
-  Readme: 7/9/2023
-  Code: 7/9/2023
+  <strong>Updated</strong>
+     Readme: 7/9/2023
+     Code: 7/9/2023
 
-  ts_prisma_vite: Typescript, Prisma (ORM), and VITE (Front-end Tooling)
+  <strong>ts_prisma_vite</strong>
+     Typescript, Prisma (ORM), and VITE (Front-end Tooling)
+
+  <strong>branches</strong>
+     js               - Javascript
+     ts               - Typescript
+     ts_prisma        - Typescript + Prisma
+     ts_prisma_vite   - Typescript + Prisma + Vite
 </pre>
 
 **Contents**  
@@ -58,4 +65,4 @@
 ### 3. Notes
 > Node 18 was used
 ---
-<sup>Used https://stackedit.io/app# to initially format this README
+<sup>Used https://stackedit.io/app# to format this README
