@@ -1,27 +1,40 @@
-# **PERN Blueprint - w/ TS**
-**Contents**
->**[1. Overview](#overview)**  
-**[2. Getting Started](#getting-started)**  
-**[3. Notes](#notes)**  
+# **PERN Template (*ts*)**
+<pre>
+  <strong>Updated</strong>
+     Code:   7/4/2023
+
+  <strong>ts</strong>
+     Typescript
+
+  <strong>branches</strong>
+     js               - Javascript
+     ts               - Typescript
+     ts_prisma        - Typescript + Prisma
+     ts_prisma_vite   - Typescript + Prisma + Vite
+</pre>
+
+**Contents**  
+>**[1. Overview](#1-overview)**  
+**[2. Getting Started](#2-getting-started)**  
+**[3. Notes](#3-notes)**  
 
 ### 1. Overview  
-> **Summary**: PERN Stack without requiring Postgres installed locally  
-> **Includes**:
-> • Javascript -> Typescript
-> **Requires**:
-> • Windows w/ WSL
-> • Docker 
-> • Official Postgres Docker Image
-> • Node
+> **Includes**:  
+> • ~~Javascript~~ Typescript  
+> **Requires**:  
+> • Linux or WSL for Windows  
+> • Docker  
+> • Official Postgres Docker Image  
+> • Node  
 
 ### 2. Getting Started
 >  #### Step 1 - Start Docker Container w/ Postgres
-  >  1. open terminal:
+  >  1. open terminal:  
   > <sup>Note: Windows Users must be using WSL </sup>
   >   * `cd database` 
   >   * `./run-postgres.sh`  
   >
-> 2. open new terminal, 
+  > 2. open new terminal, 
   >   * `docker exec -it postgres-dev bash` 
   >   * `psql -h localhost -p 5432 -U postgres`  
   >   * Enter password for user postgres, default: **`password`**
@@ -32,10 +45,21 @@
   > 
   >
 >  #### Step 2 - Start App
-  >  1. open terminal:
-  > <sup>Note: Windows Users must be using WSL </sup>
+  >  1. open terminal:  
+  > <sup>Note: Windows Users must be using WSL </sup>  
   >   * `cd server` 
-  >   * `npx nodemon index`  
-  >
+  >   * `npx prisma migrate dev --name init`  
+  >  
+  > 2. open new terminal, 
+  >   * `cd server` 
+  >   * `npm run dev:tsc`  
+  >  
+  > 2. open new terminal, 
+  >   * `cd server` 
+  >   * `npm run dev:app`  
+  >  
+
+### 3. Notes
+> Node 18 was used
 ---
 <sup>Used https://stackedit.io/app# to format this README
