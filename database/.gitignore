@@ -1,3 +1,3 @@
 # .gitignore
-pgdata/*
-mnt_data/*
+# pgdata contents handled within pgdata/.gitignore
+# mnt_data contents handled within mnt_data/.gitignore
