@@ -1,7 +1,6 @@
 # **PERN Template (*ts_prisma_vite*)**
 <pre>
   <strong>Updated</strong>
-     Readme: 7/9/2023
      Code:   7/9/2023
 
   <strong>ts_prisma_vite</strong>
