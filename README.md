@@ -1,4 +1,10 @@
-# **PERN Template (*ts*)**
+# **PERN Template (*ts*)**  
+```diff
+-                                                                 
+- NEEDS App folder, incomplete Pern Stack, no front-end - 7/9/2023
+-                                                                 
+```
+
 <pre>
   <strong>Updated</strong>
      Code:   7/4/2023
