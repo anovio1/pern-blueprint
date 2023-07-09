@@ -9,14 +9,12 @@
   <strong>Updated</strong>
      Code:   7/4/2023
 
-  <strong>js</strong>
-     Javascript
-
-  <strong>branches</strong>
-     js               - Javascript
-     ts               - Typescript
-     ts_prisma        - Typescript + Prisma
-     ts_prisma_vite   - Typescript + Prisma + Vite
+  <strong>Branches in Repo</strong>
+<strong>     Viewing   Name                   Description</strong>
+     ✅        js                     Javascript
+     ⬛        ts                     Typescript
+     ⬛        ts_prisma              Typescript + Prisma
+     ⬛        ts_prisma_vite         Typescript + Prisma + Vite
 </pre>
 
 **Contents**  
