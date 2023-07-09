@@ -28,7 +28,6 @@
 > **Includes**:  
 > • ~~Javascript~~ Typescript  
 > • Prisma (ORM)  
-> • VITE (Front End Tooling) - added react-router-dom  
 > **Requires**:  
 > • Linux or WSL for Windows  
 > • Docker  
