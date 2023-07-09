@@ -1,18 +1,37 @@
-# **PERN Blueprint - JS**
-**Contents**
->**[1. Overview](#overview)**  
-**[2. Getting Started](#getting-started)**  
-**[3. Notes](#notes)**  
+# **PERN Template (*js*)**  
+```diff
+-                                                                 
+- NEEDS App folder, incomplete Pern Stack, no front-end - 7/9/2023
+-                                                                 
+```
+
+<pre>
+  <strong>Updated</strong>
+     Code:   7/4/2023
+
+  <strong>js</strong>
+     Javascript
+
+  <strong>branches</strong>
+     js               - Javascript
+     ts               - Typescript
+     ts_prisma        - Typescript + Prisma
+     ts_prisma_vite   - Typescript + Prisma + Vite
+</pre>
+
+**Contents**  
+>**[1. Overview](#1-overview)**  
+**[2. Getting Started](#2-getting-started)**  
+**[3. Notes](#3-notes)**  
 
 ### 1. Overview  
-> **Summary**: PERN Stack without requiring Postgres installed locally  
-> **Includes**:
-> • Javascript
-> **Requires**:
-> • Windows w/ WSL
-> • Docker 
-> • Official Postgres Docker Image
-> • Node
+> **Includes**:  
+> • Javascript  
+> **Requires**:  
+> • Linux or WSL for Windows  
+> • Docker  
+> • Official Postgres Docker Image  
+> • Node  
 
 ### 2. Getting Started
 >  #### Step 1 - Start Docker Container w/ Postgres
@@ -32,10 +51,12 @@
   > 
   >
 >  #### Step 2 - Start App
-  >  1. open terminal:
-  > <sup>Note: Windows Users must be using WSL </sup>
+  >  1. open terminal:  
+  > <sup>Note: Windows Users must be using WSL </sup>  
   >   * `cd server` 
   >   * `npx nodemon index`  
-  >
+  >  
+### 3. Notes
+> Node 18 was used
 ---
 <sup>Used https://stackedit.io/app# to format this README
