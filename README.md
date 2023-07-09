@@ -5,15 +5,16 @@
 **[3. Notes](#notes)**  
 
 ### 1. Overview  
-> **Summary**: PERN Stack without requiring Postgres installed locally  
-> **Includes**:
-> • Javascript -> Typescript
-> • Prisma (ORM)
-> **Requires**:
-> • Windows w/ WSL
-> • Docker 
-> • Official Postgres Docker Image
-> • Node
+> **Summary**: PERN Stack Template
+> **Includes**:  
+> • ~~Javascript~~ Typescript  
+> • Prisma (ORM)  
+> • VITE (Front End Tooling) - added react-router-dom
+> **Requires**:  
+> • Linux or WSL for Windows  
+> • Docker  
+> • Official Postgres Docker Image  
+> • Node    
 
 ### 2. Getting Started
 >  #### Step 1 - Start Docker Container w/ Postgres
