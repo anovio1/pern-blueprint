@@ -1,24 +1,31 @@
-# **PERN Blueprint - w/ TS & Prisma**
-**Contents**
->**[1. Overview](#overview)**  
-**[2. Getting Started](#getting-started)**  
-**[3. Notes](#notes)**  
+# **PERN Template - ts_prisma_vite**
+<pre>
+  Updated
+  Readme: 7/9/2023
+  Code: 7/9/2023
+
+  ts_prisma_vite: Typescript, Prisma (ORM), and VITE (Front-end Tooling)
+</pre>
+
+**Contents**  
+>**[1. Overview](#1-overview)**  
+**[2. Getting Started](#2-getting-started)**  
+**[3. Notes](#3-notes)**  
 
 ### 1. Overview  
-> **Summary**: PERN Stack Template
 > **Includes**:  
 > • ~~Javascript~~ Typescript  
 > • Prisma (ORM)  
-> • VITE (Front End Tooling) - added react-router-dom
+> • VITE (Front End Tooling) - added react-router-dom  
 > **Requires**:  
 > • Linux or WSL for Windows  
 > • Docker  
 > • Official Postgres Docker Image  
-> • Node    
+> • Node  
 
 ### 2. Getting Started
 >  #### Step 1 - Start Docker Container w/ Postgres
-  >  1. open terminal:
+  >  1. open terminal:  
   > <sup>Note: Windows Users must be using WSL </sup>
   >   * `cd database` 
   >   * `./run-postgres.sh`  
@@ -46,6 +53,9 @@
   > 2. open new terminal, 
   >   * `cd server` 
   >   * `npm run dev:app`  
-  >
+  >  
+
+### 3. Notes
+> Node 18 was used
 ---
 <sup>Used https://stackedit.io/app# to format this README
