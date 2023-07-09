@@ -58,4 +58,4 @@
 ### 3. Notes
 > Node 18 was used
 ---
-<sup>Used https://stackedit.io/app# to format this README
+<sup>Used https://stackedit.io/app# to initially format this README
