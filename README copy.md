@@ -1,4 +1,4 @@
-# **PERN Template (*ts_prisma*)**  
+# **PERN Template (*ts*)**  
 ```diff
 -                                                                 
 - NEEDS App folder, incomplete Pern Stack, no front-end - 7/9/2023
@@ -9,8 +9,8 @@
   <strong>Updated</strong>
      Code:   7/4/2023
 
-  <strong>ts_prisma</strong>
-     Typescript, Prisma (ORM)
+  <strong>ts</strong>
+     Typescript
 
   <strong>branches</strong>
      js               - Javascript
@@ -27,8 +27,6 @@
 ### 1. Overview  
 > **Includes**:  
 > • ~~Javascript~~ Typescript  
-> • Prisma (ORM)  
-> • VITE (Front End Tooling) - added react-router-dom  
 > **Requires**:  
 > • Linux or WSL for Windows  
 > • Docker  
